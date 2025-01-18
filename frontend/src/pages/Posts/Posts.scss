@@ -1,0 +1,117 @@
+@import "../../Scss/common/colors";
+
+.posts {
+  
+  
+  .css-vbpz4a-MuiButtonBase-root-MuiButton-root {
+    margin: 20px 0;
+  }
+  
+  
+  p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+  }
+  
+  
+}
+
+.css-1lcbsct-MuiTypography-root {
+  line-height: .7 !important;
+}
+
+.post-card {
+  transition: all .5s ease-in-out !important;
+}
+
+.fade-slide-enter {
+  opacity: 0;
+}
+
+.fade-slide-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+.fade-slide-exit {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+.fade-slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100%) scale(0);
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.posts-list {
+  margin: 30px 0 0 0;
+}
+
+.posts-list div:not([class]) {
+  column-count: 3;
+  column-gap: 15px;
+  
+  & > .MuiCard-root {
+    min-width: 100%;
+    max-width: 400px;
+    margin: 0 0 10px 0;
+    background: rgba(179, 212, 248, 0.2);
+    
+  }
+  
+  .MuiCardContent-root {
+    position: relative;
+    
+    a {
+      font-size: 20px;
+      color: $a;
+      line-height: 2rem;
+      transition: all .2s ease-in-out;
+      
+      &:hover {
+        color: $hov;
+      }
+    }
+  }
+  
+  .MuiBox-root:has(button) {
+    margin: 10px 0 0 0;
+  }
+  
+  .MuiSvgIcon-root:not([data-testid='VisibilityIcon']) {
+    color: inherit;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .MuiSvgIcon-root:not([data-testid='VisibilityIcon']):hover {
+    color: $btn;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .posts-list div:not([class]) {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .posts-list div:not([class]) {
+    column-count: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../Scss/common/colors";
+
+.css-4nmryk-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.error-modal-box {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(253, 253, 253);
+  padding: 20px;
+  border-radius: 5px;
+  
+  p {
+    margin-top: 0;
+    font-size: 25px;
+  }
+}
