@@ -48,6 +48,7 @@ const Posts = () => {
             params: { sortBy, order },
           }
         );
+        
         setPosts(response.data);
         setLoading(false);
       } catch (err) {
